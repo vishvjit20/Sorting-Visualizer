@@ -20,7 +20,7 @@ algo.addEventListener("change", function (e) {
     return;
   } else if (algoVal === 1) BubbleSort(list);
   else if (algoVal === 2) InsertionSort(list);
-  else if (algoVal === 3) console.log("Selection sort");
+  else if (algoVal === 3) SelectionSort(list);
   else if (algoVal === 4) console.log("Quick sort");
   else if (algoVal === 5) console.log("Merge sort");
 });

@@ -22,6 +22,20 @@ const InsertionSort = async (arr) => {
   }
 };
 
-// InsertionSort(list);
+const isSmaller = (i, j, arr) => {
+  if (arr[i] < arr[j]) return true;
+  return false;
+};
 
-// BubbleSort(list);
+const SelectionSort = async (arr) => {
+  const size = arr.length;
+
+  for (let i = 0; i < size - 1; i++) {
+    let min = i;
+    for (let j = i + 1; j < size; j++) {
+      if (isSmaller(j, min, arr)) min = j;
+    }
+    await pause();
+    compare(i, min, arr);
+  }
+};
