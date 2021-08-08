@@ -12,7 +12,8 @@ let numbers = Math.trunc(900 / sliderVal);
 
 const randomList = () => {
   for (let i = 0; i < numbers; i++) {
-    let randomNo = Math.trunc(Math.random() * 450 + 1);
+    let randomNo = Math.trunc(Math.random() * 420 + 1);
+    if (randomNo <= 30) randomNo = 30;
     list.push(randomNo);
   }
 };
