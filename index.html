@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Sorting Visualizer</h1>
+    <div class="navbar">
+      <a id="random">Generate Array</a>
+      <span class="options">
+        <select name="" id="" class="algo-menu">
+          <option value="0">Select</option>
+          <option value="1">Bubble Sort</option>
+          <option value="2">Insertion Sort</option>
+          <option value="3">Selection Sort</option>
+          <option value="4">Quick Sort</option>
+          <option value="5">Merge Sort</option>
+        </select>
+      </span>
+      <span class="slidecontainer">
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="50"
+          class="slider"
+          id="slider"
+        />
+      </span>
+      <span class="options">
+        <select class="speed-menu">
+          <option value="0">Speed</option>
+          <option value="0.5">0.5x</option>
+          <option value="0.75">0.75x</option>
+          <option value="1">1.00x</option>
+          <option value="2">2.00x</option>
+          <option value="4">4.00x</option>
+        </select>
+      </span>
+      <a href="" class="start">Sort</a>
+    </div>
+    <br /><br />
+    <div class="center">
+      <div class="frame" id="box">
+        <div class="array"></div>
+      </div>
+    </div>
+
+    <script src="./script/app.js"></script>
+    <script src="./script/helper.js"></script>
+    <script src="./script/sorting-algorithms.js"></script>
+  </body>
+</html>
