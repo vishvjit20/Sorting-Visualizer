@@ -2,6 +2,7 @@ const speed = document.querySelector(".speed-menu");
 const algo = document.querySelector(".algo-menu");
 const random = document.querySelector("#random");
 let array = document.querySelector(".array");
+let slider = document.querySelector("#slider");
 
 let time = 100;
 
@@ -28,6 +29,8 @@ algo.addEventListener("change", function (e) {
 const clearPreviousArray = () => {
   array.innerHTML = "";
 };
+
+let sliderVal = 10;
 
 // random.addEventListener("click", () => {
 //   clearPreviousArray();

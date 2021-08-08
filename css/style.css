@@ -28,7 +28,7 @@ h1 {
 
 .slider {
   -webkit-appearance: none;
-  width: 100%;
+  width: 80%;
   height: 1rem;
   background: #ffffff;
   outline: none;
@@ -80,8 +80,9 @@ h1 {
 
 .center {
   margin: 0 auto;
-  border: 2px solid rgb(211, 102, 102);
+  border: 2px solid rgb(50, 136, 115);
   width: 900px;
+  max-width: 900px;
   height: 450px;
 }
 
@@ -92,11 +93,10 @@ h1 {
 .array {
   display: flex;
   align-items: flex-start;
+  overflow: hidden;
 }
 
 .array-vals {
-  /* height: 100px; */
-  width: 10px;
   background-color: #d8e0c5;
   border: 1px solid;
 }
