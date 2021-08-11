@@ -3,8 +3,10 @@ const algo = document.querySelector(".algo-menu");
 const random = document.querySelector("#random");
 let array = document.querySelector(".array");
 let slider = document.querySelector("#slider");
+let sort = document.querySelector(".start");
 
 let time = 100;
+let algoVal = 0;
 
 speed.addEventListener("change", function (e) {
   let timeConst = Number(e.currentTarget.value);
@@ -15,8 +17,10 @@ speed.addEventListener("change", function (e) {
 });
 
 algo.addEventListener("change", function (e) {
-  const algoVal = Number(e.currentTarget.value);
-  console.log(algoVal);
+  algoVal = Number(e.currentTarget.value);
+});
+
+sort.addEventListener("click", () => {
   if (algoVal === 0) {
     alert("Please select a valid algorith to visualize");
     return;

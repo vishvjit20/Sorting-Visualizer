@@ -78,9 +78,14 @@ h1 {
 }
 
 .start {
+  background-color: #546de5;
+  border: none;
   color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .center {
@@ -102,6 +107,6 @@ h1 {
 }
 
 .array-vals {
-  background-color: #376cb6;
+  background-color: #546de5;
   border: 1px solid;
 }
