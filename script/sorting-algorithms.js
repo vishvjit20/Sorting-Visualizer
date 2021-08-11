@@ -56,12 +56,43 @@ quickSort = async (items, left, right) => {
   var index;
   if (items.length > 1) {
     index = await partition(items, left, right);
-    if (left < index - 1) {
-      await quickSort(items, left, index - 1);
-    }
-    if (index < right) {
-      await quickSort(items, index, right);
-    }
+    if (left < index - 1) await quickSort(items, left, index - 1);
+    if (index < right) await quickSort(items, index, right);
   }
   return items;
 };
+
+merge_sort = async (list, start, mid, end) => {
+  let low = start,
+    high = mid + 1;
+
+  let temp = [],
+    k = 0;
+
+  for (let i = start; i <= end; i++) {
+    if (low > mid) temp[k++] = list[high++];
+    else if (high > end) temp[k++] = list[low++];
+    else if (list[low] < list[high]) temp[k++] = list[low++];
+    else temp[k++] = list[high++];
+  }
+
+  for (let t = 0; t < k; t++) {
+    await pause();
+    list[start] = temp[t];
+    arrHeights[start].style.height = `${temp[t]}px`;
+    start++;
+  }
+};
+
+merge_partition = async (list, start, end) => {
+  if (start < end) {
+    var mid = Math.floor((start + end) / 2);
+    await merge_partition(list, start, mid);
+    await merge_partition(list, mid + 1, end);
+    await merge_sort(list, start, mid, end);
+  }
+};
+
+function mergeSort() {
+  merge_partition(list, 0, numbers - 1);
+}

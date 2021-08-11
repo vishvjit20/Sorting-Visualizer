@@ -16,6 +16,7 @@ speed.addEventListener("change", function (e) {
 
 algo.addEventListener("change", function (e) {
   const algoVal = Number(e.currentTarget.value);
+  console.log(algoVal);
   if (algoVal === 0) {
     alert("Please select a valid algorith to visualize");
     return;
@@ -23,7 +24,7 @@ algo.addEventListener("change", function (e) {
   else if (algoVal === 2) InsertionSort(list);
   else if (algoVal === 3) SelectionSort(list);
   else if (algoVal === 4) quickSort(list, 0, numbers - 1);
-  else if (algoVal === 5) console.log("Merge sort");
+  else if (algoVal === 5) mergeSort();
 });
 
 const clearPreviousArray = () => {
@@ -31,8 +32,3 @@ const clearPreviousArray = () => {
 };
 
 let sliderVal = 10;
-
-// random.addEventListener("click", () => {
-//   clearPreviousArray();
-//   generateRandomArray();
-// });
