@@ -7,30 +7,36 @@ const pause = async () => {
 };
 
 let list = [];
+let arrHeights;
 
 let numbers = Math.trunc(900 / sliderVal);
 
-const randomList = () => {
+const generateRandomList = () => {
+  list = [];
   for (let i = 0; i < numbers; i++) {
     let randomNo = Math.trunc(Math.random() * 420 + 1);
     if (randomNo <= 30) randomNo = 30;
     list.push(randomNo);
   }
+  for (let i = 0; i < list.length; i++) {
+    let div = document.createElement("div");
+    div.classList.add("array-vals");
+    array.appendChild(div);
+  }
+  arrHeights = document.querySelectorAll(".array-vals");
+  numbers = Math.trunc(900 / sliderVal);
+  for (let i = 0; i < numbers; i++) {
+    arrHeights[i].style.height = `${list[i]}px`;
+    arrHeights[i].style.width = `${sliderVal}px`;
+  }
 };
 
-randomList();
+generateRandomList();
 
-for (let i = 0; i < list.length; i++) {
-  let div = document.createElement("div");
-  div.classList.add("array-vals");
-  array.appendChild(div);
-}
-let arrHeights = document.querySelectorAll(".array-vals");
-numbers = Math.trunc(900 / sliderVal);
-for (let i = 0; i < numbers; i++) {
-  arrHeights[i].style.height = `${list[i]}px`;
-  arrHeights[i].style.width = `${sliderVal}px`;
-}
+random.addEventListener("click", function () {
+  clearPreviousArray();
+  generateRandomList();
+});
 
 slider.addEventListener("change", function (e) {
   sliderVal = e.currentTarget.value;
