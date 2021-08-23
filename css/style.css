@@ -110,3 +110,13 @@ h1 {
   background-color: #546de5;
   border: 1px solid;
 }
+
+@media only screen and (max-width: 600px) {
+  .center {
+    width: 100%;
+  }
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
